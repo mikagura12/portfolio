@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:portfolio/core/widgets/centered_widget.dart';
+import 'package:portfolio/core/widgets/footer/footer_widget.dart';
 import 'package:portfolio/core/widgets/navigationbar/navigationbar_widget.dart';
 
 class DashboardPage extends StatefulWidget {
@@ -13,17 +15,17 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BackGround(
-        child: Column(
-          children: [
-            CustomNavigatorBar(),
-            SizedBox(
-              height: 50,
-            ),
-            Text('Dash Board'),
-          ],
+        body: BackGround(
+          child: Column(
+            children: [
+              CustomNavigatorBar(),
+              SizedBox(
+                height: 50,
+              ),
+              Text('Dash Board'),
+            ],
+          ),
         ),
-      ),
-    );
+        bottomNavigationBar: CustomFooter());
   }
 }
