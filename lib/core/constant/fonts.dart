@@ -6,3 +6,6 @@ TextStyle kFooterBigFonts =
     GoogleFonts.roboto(color: kFooterWhite, fontSize: 20);
 TextStyle kFooterSmallFonts =
     GoogleFonts.roboto(color: kFooterGrey, fontSize: 12);
+
+TextStyle kBodyBigFonts = GoogleFonts.anton(color: kFooterWhite, fontSize: 50);
+TextStyle kBodySmallFonts = GoogleFonts.anton(color: kFooterGrey, fontSize: 25);

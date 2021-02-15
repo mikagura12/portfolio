@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/widgets/body/body_widget.dart';
+import 'package:portfolio/core/widgets/body/bodyrightcontent_widget.dart';
 
 import 'package:portfolio/core/widgets/centered_widget.dart';
 import 'package:portfolio/core/widgets/footer/footer_widget.dart';
@@ -15,6 +16,8 @@ class DashboardPage extends StatefulWidget {
 class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Scaffold(
       body: BackGround(
         child: Column(
@@ -22,22 +25,29 @@ class _DashboardPageState extends State<DashboardPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Centered(child: CustomNavigatorBar()),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Body(
-                  height: 350,
-                  width: 1000,
-                  bottomRight: Radius.circular(10),
-                  topRight: Radius.circular(10),
-                ),
-                Body(
-                  height: 350,
-                  width: 500,
-                  topLeft: Radius.circular(10),
-                  bottomLeft: Radius.circular(10),
-                ),
-              ],
+            Flexible(
+              child: Wrap(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomBody(
+                          height: 350,
+                          width: size.width * .50,
+                          bottomRight: Radius.circular(10),
+                          topRight: Radius.circular(10),
+                          child: CustomBodyContentRight(),
+                          topMargin: 100),
+                      CustomBody(
+                        height: 350,
+                        width: size.width * .48,
+                        topLeft: Radius.circular(10),
+                        bottomLeft: Radius.circular(10),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
