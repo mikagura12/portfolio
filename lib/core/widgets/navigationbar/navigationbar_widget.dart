@@ -10,7 +10,10 @@ class CustomNavigatorBar extends StatelessWidget {
       child: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [CustomNavigationBarLogo(), CustomNavigationBarRoutes()],
+          children: [
+            CustomNavigationBarLogo(),
+            CustomNavigationBarRoutes(),
+          ],
         ),
       ),
     );

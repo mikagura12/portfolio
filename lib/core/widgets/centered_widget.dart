@@ -15,10 +15,24 @@ class BackGround extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
         ),
-        Container(
-            margin: EdgeInsets.symmetric(vertical: 100, horizontal: 250),
-            child: child)
+        Container(child: child)
       ],
     );
+  }
+}
+
+class Centered extends StatelessWidget {
+  Centered({Key key, this.child}) : super(key: key);
+
+  final Widget child;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: EdgeInsets.only(
+          top: 100,
+          left: 250,
+          right: 250,
+        ),
+        child: child);
   }
 }
