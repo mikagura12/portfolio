@@ -32,14 +32,14 @@ class _DashboardPageState extends State<DashboardPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomBody(
-                          height: 350,
+                          height: size.height * .5,
                           width: size.width * .50,
                           bottomRight: Radius.circular(10),
                           topRight: Radius.circular(10),
                           child: CustomBodyContentRight(),
                           topMargin: 100),
                       CustomBody(
-                        height: 350,
+                        height: size.height * .5,
                         width: size.width * .48,
                         topLeft: Radius.circular(10),
                         bottomLeft: Radius.circular(10),
